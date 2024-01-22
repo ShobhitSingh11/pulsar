@@ -33,6 +33,7 @@ import org.slf4j.Logger;
 @InterfaceAudience.Public
 @InterfaceStability.Stable
 public interface BaseContext {
+    // cgcufi
     /**
      * The tenant this component belongs to.
      *
