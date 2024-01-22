@@ -62,6 +62,7 @@ public interface Authentication extends Closeable, Serializable {
      * @return The authentication data provider
      */
     default AuthenticationDataProvider getAuthData(String brokerHostName) throws PulsarClientException {
+        // abcdef
         return this.getAuthData();
     }
 
