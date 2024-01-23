@@ -61,6 +61,7 @@ public interface BaseContext {
      * @return the number of instances that invoke this component.
      */
     int getNumInstances();
+    // qazwsxedc
 
     /**
      * The logger object that can be used to log in a component.
