@@ -1574,6 +1574,7 @@ flexible messaging model and an intuitive client API.</description>
             -Dio.netty.tryReflectionSetAccessible=true
             ${test.additional.args}
           </argLine>
+          <argLine> ${harnessArgLine} @{argLine} </argLine>
           <reuseForks>${testReuseFork}</reuseForks>
           <forkCount>${testForkCount}</forkCount>
           <shutdown>${surefire.shutdown}</shutdown>
@@ -1592,6 +1593,9 @@ flexible messaging model and an intuitive client API.</description>
               <value>org.apache.pulsar.tests.PulsarTestListener,org.apache.pulsar.tests.JacocoDumpListener,org.apache.pulsar.tests.TraceTestResourceCleanupListener,org.apache.pulsar.tests.AnnotationListener,org.apache.pulsar.tests.FailFastNotifier,org.apache.pulsar.tests.MockitoCleanupListener,org.apache.pulsar.tests.FastThreadLocalCleanupListener,org.apache.pulsar.tests.ThreadLeakDetectorListener,org.apache.pulsar.tests.SingletonCleanerListener</value>
             </property>
           </properties>
+          <properties>
+            <harnessArgLine></harnessArgLine>
+          </properties>
         </configuration>
         <dependencies>
           <dependency>
@@ -1601,12 +1605,6 @@ flexible messaging model and an intuitive client API.</description>
           </dependency>
         </dependencies>
       </plugin>
-
-      <properties>
-        <harnessArgLine></harnessArgLine>
-      </properties>
-
-      <argLine> ${harnessArgLine} @{argLine} </argLine>
  
       <plugin>
         <groupId>org.commonjava.maven.plugins</groupId>
